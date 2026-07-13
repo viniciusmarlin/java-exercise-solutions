@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Ex02 {
     public static void main(String[] args) {
-        //Instancia do Scanner
+        // Instancia do Scanner
         Scanner scanner = new Scanner(System.in);
 
-        //Inputs
+        // Inputs
 
         System.out.print("Escreva o valor do primeiro posto: R$");
         double postoUm = scanner.nextDouble();
@@ -18,10 +18,10 @@ public class Ex02 {
         System.out.print("Escreva o valor do terceiro posto: R$");
         double postoTres = scanner.nextDouble();
 
-        //Lógica
-        double calculo = (postoUm + postoDois + postoTres)/3;
+        // Lógica
+        double calculo = (postoUm + postoDois + postoTres) / 3;
 
-        //Output
+        // Output
         System.out.println("Média: R$" + calculo);
 
         scanner.close();
