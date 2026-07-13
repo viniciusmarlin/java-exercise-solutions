@@ -1,8 +1,8 @@
-package Codigos.Sequencias;
+package Solucoes.Sequencias;
 
 import java.util.Scanner;
 
-public class Exe01 {
+public class Ex01 {
     public static void main(String[] args) {
         //Instancia do Scanner
         Scanner scanner = new Scanner(System.in);
