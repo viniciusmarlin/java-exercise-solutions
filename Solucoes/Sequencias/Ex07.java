@@ -5,17 +5,16 @@ import java.util.Scanner;
 public class Ex07 {
     public static void main(String[] args) {
         // Instacia do Scanner
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
 
-        // Inputs
-        double velocidadeEmKm = scanner.nextDouble();
-        double metrosEmKm = 3.6;
+            // Inputs
+            double velocidadeKmH = scanner.nextDouble();
 
-        // Lógica
-        double calculo = velocidadeEmKm / metrosEmKm;
+            final double FATOR_CONVERSÃO = 3.6;
 
-        // Output
-        System.out.print(velocidadeEmKm + "km/h equivalem a " + calculo + "m/s");
-        scanner.close();
+            // Output & Lógica
+            System.out.printf("%.1fkm/h equivalem a %.1fm/s%n", velocidadeKmH,
+                    (velocidadeKmH / FATOR_CONVERSÃO));
+        }
     }
 }
