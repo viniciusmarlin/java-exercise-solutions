@@ -5,22 +5,19 @@ import java.util.Scanner;
 public class Ex01 {
     public static void main(String[] args) {
         // Instancia do Scanner
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
+            int vet[] = new int[8];
+            int multiplicacao = 1;
 
-        // Inputs
+            for (int i = 0; i < vet.length; i++) {
+                vet[i] = scanner.nextInt();
+            }
 
-        System.out.print("Escreva o primeiro número: ");
-        int a = scanner.nextInt();
+            for (int i = 0; i < vet.length; i++) {
+                multiplicacao *= vet[i];
+            }
 
-        System.out.print("Escreva o segundo número: ");
-        int b = scanner.nextInt();
-
-        // Lógica
-        int calculo = a + b;
-
-        // Output
-        System.out.println("Soma: " + calculo);
-
-        scanner.close();
+            System.out.println("A multiplicação de todos os elementos é: " + multiplicacao);
+        }
     }
 }
