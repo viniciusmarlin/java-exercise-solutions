@@ -5,22 +5,37 @@ import java.util.Scanner;
 public class Ex01 {
     public static void main(String[] args) {
         // Instancia do Scanner
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
+            int[][] matA = new int[3][2];
+            int[][] matB = new int[matA.length][matA[0].length];
+            int[][] matC = new int[matA.length][matA[0].length];
 
-        // Inputs
+            for (int i = 0; i < matA.length; i++) { // Percorre as LINHAS (0 a 2)
+                for (int j = 0; j < matA[i].length; j++) { // Percorre as COLUNAS da linha i (0 a 1)
+                    System.out.print("Digite o valor de matA: ");
+                    matA[i][j] = scanner.nextInt();
+                }
+            }
 
-        System.out.print("Escreva o primeiro número: ");
-        int a = scanner.nextInt();
+            for (int i = 0; i < matB.length; i++) { // Percorre as LINHAS (0 a 2)
+                for (int j = 0; j < matB[i].length; j++) { // Percorre as COLUNAS da linha i (0 a 1)
+                    System.out.print("Digite o valor de matB: ");
+                    matB[i][j] = scanner.nextInt();
+                }
+            }
 
-        System.out.print("Escreva o segundo número: ");
-        int b = scanner.nextInt();
+            for (int i = 0; i < matC.length; i++) {
+                for (int j = 0; j < matC[i].length; j++) {
+                    matC[i][j] = matA[i][j] + matB[i][j];
+                }
+            }
 
-        // Lógica
-        int calculo = a + b;
-
-        // Output
-        System.out.println("Soma: " + calculo);
-
-        scanner.close();
+            for (int i = 0; i < matC.length; i++) {
+                for (int j = 0; j < matC[i].length; j++) {
+                    System.out.print(matC[i][j] + " ");
+                }
+                System.out.println();
+            }
+        }
     }
 }
