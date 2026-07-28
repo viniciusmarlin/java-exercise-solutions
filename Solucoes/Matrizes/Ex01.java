@@ -10,15 +10,15 @@ public class Ex01 {
             int[][] matB = new int[matA.length][matA[0].length];
             int[][] matC = new int[matA.length][matA[0].length];
 
-            for (int i = 0; i < matA.length; i++) { // Percorre as LINHAS (0 a 2)
-                for (int j = 0; j < matA[i].length; j++) { // Percorre as COLUNAS da linha i (0 a 1)
+            for (int i = 0; i < matA.length; i++) {
+                for (int j = 0; j < matA[i].length; j++) {
                     System.out.print("Digite o valor de matA: ");
                     matA[i][j] = scanner.nextInt();
                 }
             }
 
-            for (int i = 0; i < matB.length; i++) { // Percorre as LINHAS (0 a 2)
-                for (int j = 0; j < matB[i].length; j++) { // Percorre as COLUNAS da linha i (0 a 1)
+            for (int i = 0; i < matB.length; i++) { 
+                for (int j = 0; j < matB[i].length; j++) { 
                     System.out.print("Digite o valor de matB: ");
                     matB[i][j] = scanner.nextInt();
                 }
