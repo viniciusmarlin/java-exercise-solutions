@@ -1,8 +1,5 @@
 package Solucoes.Switch;
 
-/*
-4) Escreva um programa que leia dois números e a operação a ser realizada  (+, -, *, /).
-*/
 import java.util.Scanner;
 
 public class Ex04 {
